@@ -492,7 +492,7 @@ jobs:
           -d parse_mode="html"
         }
 
-        send_telegram_message "Crave Project: ${{ github.event.inputs.BASE_PROJECT }}%0ACrave ProjectID: $PROJECTID %0ABuild for ${{ github.event.inputs.DEVICE_NAME }} has Succeeded!"
+        send_telegram_message "<b>Crave Project: </b>${{ github.event.inputs.BASE_PROJECT }}%0A<b>Crave ProjectID: </b>$PROJECTID %0ABuild for ${{ github.event.inputs.DEVICE_NAME }} has Succeeded!"
 
       env:
         chatId: ${{ secrets.TELEGRAM_TO }}
